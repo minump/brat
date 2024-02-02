@@ -15,6 +15,13 @@ address it promptly.
 [brat]:         http://brat.nlplab.org
 [brat_issues]:  https://github.com/nlplab/brat/issues
 
+## BRAT Docker ##
+```
+docker build -t brat .
+docker run --name brat-server -p 8080:80 -v "$(pwd)/shared:/usr/local/apache2/htdocs/brat/data/shared" -d brat
+```
+The web interface is available at http://127.0.0.1:8080/brat/.
+
 ## About brat ##
 
 *brat* (brat rapid annotation tool) is based on the [stav][stav] visualiser
